@@ -2,6 +2,10 @@
 
 Production-style earthquake analytics system with minute-level refresh, validation-first ingestion, relational storage, anomaly modeling, explainability outputs, and a live Streamlit dashboard.
 
+## Live App
+
+- Streamlit dashboard: [https://real-time-earthquake-analytics-57bvnvydgnv5gz8bgnurfu.streamlit.app/](https://real-time-earthquake-analytics-57bvnvydgnv5gz8bgnurfu.streamlit.app/)
+
 ## Overview
 
 This project builds an end-to-end analytics pipeline for earthquake monitoring from `all_month.geojson`:
