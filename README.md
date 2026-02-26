@@ -1,34 +1,33 @@
 # Real-Time Earthquake Analytics
 
-Production-style earthquake analytics system with minute-level refresh, validation-first ingestion, relational storage, anomaly modeling, explainability outputs, and a live Streamlit dashboard.
+End-to-end earthquake analytics platform with ingestion, validation, clustering, anomaly detection, explainability, and a live dashboard.
 
-## Live App
+## Live Deployment
 
-- Streamlit dashboard: [https://real-time-earthquake-analytics-57bvnvydgnv5gz8bgnurfu.streamlit.app/](https://real-time-earthquake-analytics-57bvnvydgnv5gz8bgnurfu.streamlit.app/)
+- Streamlit app: [real-time-earthquake-analytics-57bvnvydgnv5gz8bgnurfu.streamlit.app](https://real-time-earthquake-analytics-57bvnvydgnv5gz8bgnurfu.streamlit.app/)
+- Data pipeline scheduler: GitHub Actions (`.github/workflows/earthquake_pipeline.yml`)
+- Database: Neon Postgres
 
-## Overview
+## What This Project Does
 
-This project builds an end-to-end analytics pipeline for earthquake monitoring from `all_month.geojson`:
-
-- Ingests new events every run (supports HTTP and local file source).
-- Runs strict validation and quality checks before storage.
-- Stores curated records in a relational database via SQLAlchemy.
-- Generates `sysoJSON` summary outputs for downstream use.
-- Detects spatial-temporal clusters (aftershock/surge behavior).
-- Scores unusual regional activity with a lightweight model.
-- Logs model metrics and explainability artifacts for each run.
-- Serves interactive map + trend + alert panels in Streamlit.
+- Ingests earthquake feed data (USGS GeoJSON or local file source).
+- Applies strict validation and quality checks before storage.
+- Stores curated events in a relational database (SQLAlchemy + Postgres/SQLite).
+- Builds spatial-temporal clusters to capture aftershock/surge behavior.
+- Runs a lightweight regional activity model with anomaly scoring.
+- Generates explainability outputs and model metrics artifacts.
+- Powers an interactive Streamlit dashboard with map, trends, alerts, and quality panels.
 
 ## Architecture
 
 ```mermaid
 flowchart LR
-    A[GeoJSON Feed] --> B[Ingestion + Validation]
-    B --> C[(Relational DB)]
-    C --> D[Feature & Aggregation Layer]
+    A[USGS GeoJSON Feed] --> B[Ingestion + Validation]
+    B --> C[(Neon/Postgres DB)]
+    C --> D[Feature + Aggregation Layer]
     D --> E[Clustering]
-    D --> F[Anomaly Modeling]
-    F --> G[Explainability + Metrics Logs]
+    D --> F[Regional Anomaly Model]
+    F --> G[Explainability + Metrics Artifacts]
     C --> H[sysoJSON Summary Feed]
     H --> I[Streamlit Dashboard]
     E --> I
@@ -36,14 +35,20 @@ flowchart LR
     G --> I
 ```
 
+## Production Flow (Current)
+
+1. GitHub Actions runs the pipeline every 5 minutes.
+2. Pipeline ingests latest feed data and updates Neon DB.
+3. Streamlit app reads from Neon DB and displays latest analytics.
+4. New runs are visible in `ingestion_runs` table.
+
 ## Repository Structure
 
 ```text
 .
-|-- dashboard/
-|   `-- app.py
-|-- data/
-|   `-- all_month.geojson
+|-- .github/workflows/earthquake_pipeline.yml
+|-- dashboard/app.py
+|-- data/all_month.geojson
 |-- docs/
 |   |-- hypothesis_matrix.md
 |   `-- runbook.md
@@ -61,61 +66,27 @@ flowchart LR
 `-- src/earthquake_analytics/
 ```
 
-## Quick Start
-
-### 1. Install
+## Local Run
 
 ```bash
 pip install -e .
-```
-
-### 2. Configure
-
-```bash
 copy .env.example .env
-```
-
-Key variables:
-
-- `EARTHQUAKE_SOURCE_URL` (default local: `data/all_month.geojson`)
-- `EARTHQUAKE_DB_URL` (default SQLite)
-- `REFRESH_INTERVAL_SECONDS`
-- `MAG_ALERT_THRESHOLD`
-- `ANOMALY_Z_THRESHOLD`
-
-### 3. Run One Pipeline Cycle
-
-```bash
 python -m earthquake_analytics
-```
-
-### 4. Run Every Minute (Scheduler)
-
-```bash
-python -m earthquake_analytics.run_scheduler
-```
-
-### 5. Launch Dashboard
-
-```bash
 python -m streamlit run dashboard/app.py
 ```
 
 ## Visualizations
 
 ### Hypothesis-Driven EDA
-
 ![EDA Hypothesis Visualizations](artifacts/eda_hypothesis_plots.png)
 
-### Model Validation: Predicted vs Observed
-
+### Model Validation (Predicted vs Observed)
 ![Model Validation Scatter](artifacts/model_validation_scatter.png)
 
-### Model Validation: Time-Series Comparison
-
+### Model Validation (Time Series)
 ![Model Validation Time Series](artifacts/model_validation_timeseries.png)
 
-## Outputs
+## Key Outputs
 
 | Category | File |
 |---|---|
@@ -128,45 +99,17 @@ python -m streamlit run dashboard/app.py
 
 ## Modeling and Explainability
 
-- The model estimates expected regional event counts from recent and seasonal patterns.
-- Anomaly scores are computed using z-scores on observed vs expected activity.
-- Explainability is provided through component-level contribution breakdowns and reason flags for anomalous regions.
-- Classification and regression metrics are logged each run (`precision`, `accuracy`, `recall`, `f1`, `mae`, `rmse`).
+- Model predicts expected regional event activity from recent + seasonal behavior.
+- Anomaly scoring uses z-scores on observed vs expected activity.
+- Explainability includes contribution breakdowns and reason flags.
+- Metrics tracked include `precision`, `accuracy`, `recall`, `f1`, `mae`, `rmse`.
 
-## Quality Controls
+## Deployment Notes
 
-Hard rejection checks:
-
-- Missing event IDs or required fields
-- Invalid timestamps/geometry/coordinates
-- Coordinate range violations
-
-Soft warning checks:
-
-- Missing magnitude
-- High RMS / azimuthal gap
-- Non-earthquake event types
-- Out-of-window age
-
-## Deployment
-
-Dashboard can be deployed quickly on Streamlit Community Cloud (`dashboard/app.py` as entrypoint).  
-For full production behavior (scheduler + DB + dashboard), deploy pipeline/scheduler on a worker service and dashboard as a separate web service.
-
-## GitHub Actions Scheduler (Free Worker Alternative)
-
-This repository includes `.github/workflows/earthquake_pipeline.yml` which runs the full pipeline on a cron schedule and manual trigger.
-
-Setup:
-
-1. In GitHub repo settings, add secret `EARTHQUAKE_DB_URL` with your Neon/Postgres SQLAlchemy URL:
-   - `postgresql+psycopg2://<user>:<password>@<host>/<db>?sslmode=require`
-2. Keep Streamlit app configured with the same database URL.
-3. Workflow runs every 5 minutes (GitHub Actions minimum interval).
-
-Manual run:
-
-- GitHub -> Actions -> `Earthquake Pipeline Scheduler` -> `Run workflow`
+- Dashboard host: Streamlit Community Cloud.
+- Scheduler host: GitHub Actions (cron every 5 minutes, with manual trigger support).
+- Required GitHub secret:
+  - `EARTHQUAKE_DB_URL=postgresql+psycopg2://<user>:<password>@<host>/<db>?sslmode=require`
 
 ## License
 
