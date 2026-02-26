@@ -149,6 +149,21 @@ Soft warning checks:
 Dashboard can be deployed quickly on Streamlit Community Cloud (`dashboard/app.py` as entrypoint).  
 For full production behavior (scheduler + DB + dashboard), deploy pipeline/scheduler on a worker service and dashboard as a separate web service.
 
+## GitHub Actions Scheduler (Free Worker Alternative)
+
+This repository includes `.github/workflows/earthquake_pipeline.yml` which runs the full pipeline on a cron schedule and manual trigger.
+
+Setup:
+
+1. In GitHub repo settings, add secret `EARTHQUAKE_DB_URL` with your Neon/Postgres SQLAlchemy URL:
+   - `postgresql+psycopg2://<user>:<password>@<host>/<db>?sslmode=require`
+2. Keep Streamlit app configured with the same database URL.
+3. Workflow runs every 5 minutes (GitHub Actions minimum interval).
+
+Manual run:
+
+- GitHub -> Actions -> `Earthquake Pipeline Scheduler` -> `Run workflow`
+
 ## License
 
 MIT

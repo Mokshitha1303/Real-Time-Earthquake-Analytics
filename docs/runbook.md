@@ -50,3 +50,11 @@ python -m earthquake_analytics.run_eda
   - Raise `MAG_ALERT_THRESHOLD`.
 - Scheduler overlap risk:
   - Prevented by APScheduler `max_instances=1` and `coalesce=True`.
+
+## 9. GitHub Actions Scheduled Runs
+- Workflow file: `.github/workflows/earthquake_pipeline.yml`
+- Add repository secret:
+  - `EARTHQUAKE_DB_URL=postgresql+psycopg2://...`
+- Trigger options:
+  - Automatic: every 5 minutes
+  - Manual: GitHub Actions "Run workflow"
