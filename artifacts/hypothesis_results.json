@@ -1,0 +1,34 @@
+{
+  "generated_at_utc": "2026-02-26T04:06:11.546314+00:00",
+  "rows_used": 9478,
+  "results": [
+    {
+      "hypothesis_id": "H1",
+      "statement": "Higher magnitude events tend to have higher significance scores.",
+      "metric": "pearson_corr(mag,sig)",
+      "value": 0.9212117277771644,
+      "decision_rule": "supported if correlation >= 0.50",
+      "status": "supported",
+      "notes": "Uses all earthquake rows with non-null mag and sig."
+    },
+    {
+      "hypothesis_id": "H2",
+      "statement": "Shallow earthquakes (<30 km) show stronger impact signal than deeper earthquakes.",
+      "metric": "median_sig_ratio(shallow/deep)",
+      "value": 0.37037037037037035,
+      "decision_rule": "supported if ratio >= 1.20",
+      "status": "not_supported",
+      "notes": "shallow_median_sig=30.0, deep_median_sig=81.0"
+    },
+    {
+      "hypothesis_id": "H3",
+      "statement": "Local activity within 200 km increases in 48h after M>=5 events.",
+      "metric": "mean((after_48h+1)/(before_48h+1))",
+      "value": 2.4724704047352173,
+      "decision_rule": "supported if mean ratio >= 1.20",
+      "status": "supported",
+      "notes": "Mainshock windows compared against pre-shock baseline in same radius."
+    }
+  ],
+  "plot_path": "artifacts\\eda_hypothesis_plots.png"
+}

@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "earthquake-analytics"
+version = "0.1.0"
+description = "Real-time earthquake analytics pipeline with validation, storage, clustering, and dashboarding."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+  "apscheduler>=3.10.4,<4",
+  "matplotlib>=3.8.0,<4",
+  "numpy>=1.26.0,<3",
+  "pandas>=2.1.0,<3",
+  "plotly>=5.20.0,<6",
+  "python-dotenv>=1.0.0,<2",
+  "requests>=2.31.0,<3",
+  "scikit-learn>=1.4.0,<2",
+  "sqlalchemy>=2.0.0,<3",
+  "streamlit>=1.34.0,<2",
+  "streamlit-autorefresh>=1.0.1,<2",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0.0,<9",
+]
+
+[project.scripts]
+eq-pipeline = "earthquake_analytics.cli:run_pipeline_command"
+eq-scheduler = "earthquake_analytics.cli:run_scheduler_command"
+eq-eda = "earthquake_analytics.cli:run_eda_command"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]

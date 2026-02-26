@@ -1,0 +1,1107 @@
+{
+  "sysoJSON_version": "1.0",
+  "generated_at_utc": "2026-02-26T04:06:05.943687+00:00",
+  "source_feed_url": "data/all_month.geojson",
+  "source_generated_at_utc": "2026-02-26T00:06:36+00:00",
+  "refresh_interval_seconds": 60,
+  "run_id": 20,
+  "kpis": {
+    "events_last_hour": 6,
+    "events_last_24h": 195,
+    "max_magnitude_24h": 5.5,
+    "tsunami_flagged_24h": 0,
+    "quality_pass_rate_24h": 95.8974358974359
+  },
+  "alerts": {
+    "magnitude_threshold": 5.0,
+    "anomaly_z_threshold": 1.0,
+    "anomaly_min_count": 3,
+    "magnitude": [
+      {
+        "event_id": "us7000s06i",
+        "time_utc": "2026-02-25T11:14:02.996000+00:00",
+        "mag": 5.5,
+        "place": "13 km ESE of Madang, Papua New Guinea",
+        "region_hint": "Papua New Guinea",
+        "tsunami": 0
+      },
+      {
+        "event_id": "us7000s06h",
+        "time_utc": "2026-02-25T11:12:06.125000+00:00",
+        "mag": 5.4,
+        "place": "28 km NNW of Ishqoshim, Tajikistan",
+        "region_hint": "Tajikistan",
+        "tsunami": 0
+      },
+      {
+        "event_id": "us7000s066",
+        "time_utc": "2026-02-25T09:07:44.881000+00:00",
+        "mag": 5.2,
+        "place": "95 km S of Sukumo, Japan",
+        "region_hint": "Japan",
+        "tsunami": 0
+      },
+      {
+        "event_id": "us7000s0da",
+        "time_utc": "2026-02-26T02:49:04.986000+00:00",
+        "mag": 5.2,
+        "place": "120 km WNW of Houma, Tonga",
+        "region_hint": "Tonga",
+        "tsunami": 0
+      },
+      {
+        "event_id": "us7000s0bx",
+        "time_utc": "2026-02-25T22:40:46.696000+00:00",
+        "mag": 5.2,
+        "place": "east of the Kuril Islands",
+        "region_hint": "east of the Kuril Islands",
+        "tsunami": 0
+      },
+      {
+        "event_id": "us7000s096",
+        "time_utc": "2026-02-25T16:51:49.402000+00:00",
+        "mag": 5.1,
+        "place": "83 km SSE of Mawlaik, Burma (Myanmar)",
+        "region_hint": "Burma (Myanmar)",
+        "tsunami": 0
+      },
+      {
+        "event_id": "us7000s06c",
+        "time_utc": "2026-02-25T09:48:08.855000+00:00",
+        "mag": 5.0,
+        "place": "22 km NNE of Lata, Solomon Islands",
+        "region_hint": "Solomon Islands",
+        "tsunami": 0
+      },
+      {
+        "event_id": "us7000s09j",
+        "time_utc": "2026-02-25T17:49:32.099000+00:00",
+        "mag": 5.0,
+        "place": "109 km WNW of Pariaman, Indonesia",
+        "region_hint": "Indonesia",
+        "tsunami": 0
+      }
+    ],
+    "anomalous_regions": [
+      {
+        "region_hint": "Hawaii",
+        "hour_utc": "2026-02-26T03:00:00+00:00",
+        "observed_count": 3,
+        "expected_count": 0.3629345239881544,
+        "z_score": 2.2588293223084075
+      }
+    ]
+  },
+  "quality": {
+    "accepted_count": 9633,
+    "rejected_count": 0,
+    "warning_count": 473,
+    "new_count": 12,
+    "updated_count": 9621
+  },
+  "clusters": [
+    {
+      "cluster_id": 1,
+      "event_count": 72,
+      "start_time_utc": "2026-02-24T04:11:30.540000+00:00",
+      "end_time_utc": "2026-02-26T03:06:24.490000+00:00",
+      "centroid_lat": 34.16993053464536,
+      "centroid_lon": -117.08375001554133,
+      "mean_magnitude": 1.1778580569066337,
+      "max_magnitude": 3.55,
+      "region_hint": "CA"
+    },
+    {
+      "cluster_id": 0,
+      "event_count": 52,
+      "start_time_utc": "2026-02-24T04:09:52.540000+00:00",
+      "end_time_utc": "2026-02-26T00:18:57.640000+00:00",
+      "centroid_lat": 38.53232369056116,
+      "centroid_lon": -122.57754487257733,
+      "mean_magnitude": 1.1207692307692307,
+      "max_magnitude": 2.61,
+      "region_hint": "CA"
+    },
+    {
+      "cluster_id": 9,
+      "event_count": 42,
+      "start_time_utc": "2026-02-24T05:16:44.972000+00:00",
+      "end_time_utc": "2026-02-25T17:13:27.114000+00:00",
+      "centroid_lat": 52.42818571428571,
+      "centroid_lon": -169.79810476190477,
+      "mean_magnitude": 2.9047619047619047,
+      "max_magnitude": 4.4,
+      "region_hint": "Alaska"
+    },
+    {
+      "cluster_id": 3,
+      "event_count": 36,
+      "start_time_utc": "2026-02-24T04:26:00.151000+00:00",
+      "end_time_utc": "2026-02-26T03:09:54.439000+00:00",
+      "centroid_lat": 31.667277777777777,
+      "centroid_lon": -104.07744444444445,
+      "mean_magnitude": 1.7083333333333335,
+      "max_magnitude": 2.6,
+      "region_hint": "Texas"
+    },
+    {
+      "cluster_id": 11,
+      "event_count": 35,
+      "start_time_utc": "2026-02-24T05:53:41.100000+00:00",
+      "end_time_utc": "2026-02-26T03:19:31.660000+00:00",
+      "centroid_lat": 19.241180991617842,
+      "centroid_lon": -155.43468002697162,
+      "mean_magnitude": 1.9474285714285713,
+      "max_magnitude": 3.56,
+      "region_hint": "Hawaii"
+    },
+    {
+      "cluster_id": 5,
+      "event_count": 33,
+      "start_time_utc": "2026-02-24T04:44:38.803000+00:00",
+      "end_time_utc": "2026-02-25T23:17:48.693000+00:00",
+      "centroid_lat": 32.22175757575758,
+      "centroid_lon": -101.95157575757575,
+      "mean_magnitude": 1.096969696969697,
+      "max_magnitude": 2.4,
+      "region_hint": "Texas"
+    },
+    {
+      "cluster_id": 7,
+      "event_count": 31,
+      "start_time_utc": "2026-02-24T05:00:18.773000+00:00",
+      "end_time_utc": "2026-02-25T23:03:29.307000+00:00",
+      "centroid_lat": 61.064180645161294,
+      "centroid_lon": -143.38722903225806,
+      "mean_magnitude": 2.0129032258064514,
+      "max_magnitude": 3.7,
+      "region_hint": "Alaska"
+    },
+    {
+      "cluster_id": 8,
+      "event_count": 13,
+      "start_time_utc": "2026-02-24T05:08:58.980000+00:00",
+      "end_time_utc": "2026-02-25T19:02:31.800000+00:00",
+      "centroid_lat": 37.64472288912258,
+      "centroid_lon": -118.58785860971301,
+      "mean_magnitude": 1.3730769230769229,
+      "max_magnitude": 2.3,
+      "region_hint": "CA"
+    },
+    {
+      "cluster_id": 13,
+      "event_count": 13,
+      "start_time_utc": "2026-02-24T08:21:35.692000+00:00",
+      "end_time_utc": "2026-02-26T03:42:34.166000+00:00",
+      "centroid_lat": 60.95176923076924,
+      "centroid_lon": -150.95246153846153,
+      "mean_magnitude": 2.175,
+      "max_magnitude": 2.7,
+      "region_hint": "Alaska"
+    },
+    {
+      "cluster_id": 4,
+      "event_count": 9,
+      "start_time_utc": "2026-02-24T04:27:31.810000+00:00",
+      "end_time_utc": "2026-02-25T07:50:04.430000+00:00",
+      "centroid_lat": 51.49487777777778,
+      "centroid_lon": -177.7843962962963,
+      "mean_magnitude": 2.0533333333333332,
+      "max_magnitude": 3.4,
+      "region_hint": "Alaska"
+    }
+  ],
+  "cluster_stats": {
+    "window_event_count": 469,
+    "cluster_count": 20,
+    "noise_count": 84
+  },
+  "model": {
+    "regions_modeled": 141,
+    "mae": 0.16618731471616974,
+    "rmse": 0.602711115320743,
+    "precision": 0.9484126984126984,
+    "recall": 0.8184931506849316,
+    "f1": 0.8786764705882353,
+    "accuracy": 0.998509922561127,
+    "specificity": 0.9997045521692689,
+    "balanced_accuracy": 0.9090988514271002,
+    "tp": 239,
+    "tn": 43988,
+    "fp": 13,
+    "fn": 53,
+    "selected_z_threshold": 1.0,
+    "selected_min_anomaly_count": 3,
+    "threshold_selection_strategy": "precision_guarded",
+    "base_tuned_threshold_metrics": {
+      "z_threshold": 1.0,
+      "min_anomaly_count": 3,
+      "precision": 0.7038043478260869,
+      "recall": 0.886986301369863,
+      "f1": 0.7848484848484848
+    },
+    "region_thresholds_count": 2,
+    "region_calibration_summary": {
+      "regions_tested": 5,
+      "regions_accepted": 2,
+      "regions_with_custom_threshold": 2,
+      "mean_holdout_f1_gain": 0.2124094202898551,
+      "mean_holdout_recall_gain": -0.033333333333333326
+    },
+    "tuned_threshold_metrics": {
+      "z_threshold": 1.0,
+      "min_anomaly_count": 3,
+      "precision": 0.7038043478260869,
+      "recall": 0.886986301369863,
+      "f1": 0.7848484848484848
+    },
+    "top_anomalies": [
+      {
+        "region_hint": "Hawaii",
+        "hour_utc": "2026-02-26T03:00:00+00:00",
+        "observed_count": 3,
+        "expected_count": 0.3629345239881544,
+        "z_score": 2.2588293223084075,
+        "region_z_threshold": 1.0,
+        "region_min_anomaly_count": 3,
+        "is_anomalous": true,
+        "explanation": {
+          "top_expected_components": [
+            {
+              "component": "recent_mean_6",
+              "weight": 0.2938388519,
+              "raw_value": 0.6666666666666666,
+              "contribution": 0.19589256793333332
+            },
+            {
+              "component": "recent_mean_24",
+              "weight": 0.1642107105,
+              "raw_value": 0.5,
+              "contribution": 0.08210535525
+            },
+            {
+              "component": "ewma_24",
+              "weight": 0.0669754899,
+              "raw_value": 0.5294989973291439,
+              "contribution": 0.0354634547476782
+            }
+          ],
+          "reason_flags": [
+            "z_score_above_region_threshold",
+            "count_above_region_min",
+            "flagged_anomalous"
+          ]
+        }
+      }
+    ],
+    "latest_hour_utc": "2026-02-26T03:00:00+00:00",
+    "validation_plot": "artifacts\\model_validation_scatter.png",
+    "timeseries_plot": "artifacts\\model_validation_timeseries.png",
+    "metrics_latest_path": "artifacts\\model_metrics_latest.json",
+    "metrics_history_path": "artifacts\\model_metrics_history.jsonl",
+    "explainability_path": "artifacts\\model_explainability_latest.json",
+    "model_log_path": "artifacts\\model_run.log"
+  },
+  "trends": {
+    "hourly_counts": [
+      {
+        "hour_utc": "2026-02-19T04:00:00+00:00",
+        "count": 12
+      },
+      {
+        "hour_utc": "2026-02-19T05:00:00+00:00",
+        "count": 15
+      },
+      {
+        "hour_utc": "2026-02-19T06:00:00+00:00",
+        "count": 12
+      },
+      {
+        "hour_utc": "2026-02-19T07:00:00+00:00",
+        "count": 18
+      },
+      {
+        "hour_utc": "2026-02-19T08:00:00+00:00",
+        "count": 14
+      },
+      {
+        "hour_utc": "2026-02-19T09:00:00+00:00",
+        "count": 17
+      },
+      {
+        "hour_utc": "2026-02-19T10:00:00+00:00",
+        "count": 14
+      },
+      {
+        "hour_utc": "2026-02-19T11:00:00+00:00",
+        "count": 12
+      },
+      {
+        "hour_utc": "2026-02-19T12:00:00+00:00",
+        "count": 12
+      },
+      {
+        "hour_utc": "2026-02-19T13:00:00+00:00",
+        "count": 10
+      },
+      {
+        "hour_utc": "2026-02-19T14:00:00+00:00",
+        "count": 13
+      },
+      {
+        "hour_utc": "2026-02-19T15:00:00+00:00",
+        "count": 12
+      },
+      {
+        "hour_utc": "2026-02-19T16:00:00+00:00",
+        "count": 10
+      },
+      {
+        "hour_utc": "2026-02-19T17:00:00+00:00",
+        "count": 12
+      },
+      {
+        "hour_utc": "2026-02-19T18:00:00+00:00",
+        "count": 11
+      },
+      {
+        "hour_utc": "2026-02-19T19:00:00+00:00",
+        "count": 9
+      },
+      {
+        "hour_utc": "2026-02-19T20:00:00+00:00",
+        "count": 10
+      },
+      {
+        "hour_utc": "2026-02-19T21:00:00+00:00",
+        "count": 8
+      },
+      {
+        "hour_utc": "2026-02-19T22:00:00+00:00",
+        "count": 11
+      },
+      {
+        "hour_utc": "2026-02-19T23:00:00+00:00",
+        "count": 7
+      },
+      {
+        "hour_utc": "2026-02-20T00:00:00+00:00",
+        "count": 15
+      },
+      {
+        "hour_utc": "2026-02-20T01:00:00+00:00",
+        "count": 12
+      },
+      {
+        "hour_utc": "2026-02-20T02:00:00+00:00",
+        "count": 9
+      },
+      {
+        "hour_utc": "2026-02-20T03:00:00+00:00",
+        "count": 4
+      },
+      {
+        "hour_utc": "2026-02-20T04:00:00+00:00",
+        "count": 6
+      },
+      {
+        "hour_utc": "2026-02-20T05:00:00+00:00",
+        "count": 11
+      },
+      {
+        "hour_utc": "2026-02-20T06:00:00+00:00",
+        "count": 14
+      },
+      {
+        "hour_utc": "2026-02-20T07:00:00+00:00",
+        "count": 13
+      },
+      {
+        "hour_utc": "2026-02-20T08:00:00+00:00",
+        "count": 13
+      },
+      {
+        "hour_utc": "2026-02-20T09:00:00+00:00",
+        "count": 7
+      },
+      {
+        "hour_utc": "2026-02-20T10:00:00+00:00",
+        "count": 13
+      },
+      {
+        "hour_utc": "2026-02-20T11:00:00+00:00",
+        "count": 6
+      },
+      {
+        "hour_utc": "2026-02-20T12:00:00+00:00",
+        "count": 12
+      },
+      {
+        "hour_utc": "2026-02-20T13:00:00+00:00",
+        "count": 12
+      },
+      {
+        "hour_utc": "2026-02-20T14:00:00+00:00",
+        "count": 14
+      },
+      {
+        "hour_utc": "2026-02-20T15:00:00+00:00",
+        "count": 7
+      },
+      {
+        "hour_utc": "2026-02-20T16:00:00+00:00",
+        "count": 7
+      },
+      {
+        "hour_utc": "2026-02-20T17:00:00+00:00",
+        "count": 11
+      },
+      {
+        "hour_utc": "2026-02-20T18:00:00+00:00",
+        "count": 9
+      },
+      {
+        "hour_utc": "2026-02-20T19:00:00+00:00",
+        "count": 15
+      },
+      {
+        "hour_utc": "2026-02-20T20:00:00+00:00",
+        "count": 12
+      },
+      {
+        "hour_utc": "2026-02-20T21:00:00+00:00",
+        "count": 7
+      },
+      {
+        "hour_utc": "2026-02-20T22:00:00+00:00",
+        "count": 9
+      },
+      {
+        "hour_utc": "2026-02-20T23:00:00+00:00",
+        "count": 5
+      },
+      {
+        "hour_utc": "2026-02-21T00:00:00+00:00",
+        "count": 7
+      },
+      {
+        "hour_utc": "2026-02-21T01:00:00+00:00",
+        "count": 16
+      },
+      {
+        "hour_utc": "2026-02-21T02:00:00+00:00",
+        "count": 8
+      },
+      {
+        "hour_utc": "2026-02-21T03:00:00+00:00",
+        "count": 16
+      },
+      {
+        "hour_utc": "2026-02-21T04:00:00+00:00",
+        "count": 8
+      },
+      {
+        "hour_utc": "2026-02-21T05:00:00+00:00",
+        "count": 6
+      },
+      {
+        "hour_utc": "2026-02-21T06:00:00+00:00",
+        "count": 9
+      },
+      {
+        "hour_utc": "2026-02-21T07:00:00+00:00",
+        "count": 20
+      },
+      {
+        "hour_utc": "2026-02-21T08:00:00+00:00",
+        "count": 15
+      },
+      {
+        "hour_utc": "2026-02-21T09:00:00+00:00",
+        "count": 18
+      },
+      {
+        "hour_utc": "2026-02-21T10:00:00+00:00",
+        "count": 20
+      },
+      {
+        "hour_utc": "2026-02-21T11:00:00+00:00",
+        "count": 14
+      },
+      {
+        "hour_utc": "2026-02-21T12:00:00+00:00",
+        "count": 8
+      },
+      {
+        "hour_utc": "2026-02-21T13:00:00+00:00",
+        "count": 10
+      },
+      {
+        "hour_utc": "2026-02-21T14:00:00+00:00",
+        "count": 9
+      },
+      {
+        "hour_utc": "2026-02-21T15:00:00+00:00",
+        "count": 9
+      },
+      {
+        "hour_utc": "2026-02-21T16:00:00+00:00",
+        "count": 6
+      },
+      {
+        "hour_utc": "2026-02-21T17:00:00+00:00",
+        "count": 35
+      },
+      {
+        "hour_utc": "2026-02-21T18:00:00+00:00",
+        "count": 30
+      },
+      {
+        "hour_utc": "2026-02-21T19:00:00+00:00",
+        "count": 17
+      },
+      {
+        "hour_utc": "2026-02-21T20:00:00+00:00",
+        "count": 13
+      },
+      {
+        "hour_utc": "2026-02-21T21:00:00+00:00",
+        "count": 14
+      },
+      {
+        "hour_utc": "2026-02-21T22:00:00+00:00",
+        "count": 7
+      },
+      {
+        "hour_utc": "2026-02-21T23:00:00+00:00",
+        "count": 15
+      },
+      {
+        "hour_utc": "2026-02-22T00:00:00+00:00",
+        "count": 18
+      },
+      {
+        "hour_utc": "2026-02-22T01:00:00+00:00",
+        "count": 13
+      },
+      {
+        "hour_utc": "2026-02-22T02:00:00+00:00",
+        "count": 6
+      },
+      {
+        "hour_utc": "2026-02-22T03:00:00+00:00",
+        "count": 5
+      },
+      {
+        "hour_utc": "2026-02-22T04:00:00+00:00",
+        "count": 11
+      },
+      {
+        "hour_utc": "2026-02-22T05:00:00+00:00",
+        "count": 11
+      },
+      {
+        "hour_utc": "2026-02-22T06:00:00+00:00",
+        "count": 14
+      },
+      {
+        "hour_utc": "2026-02-22T07:00:00+00:00",
+        "count": 12
+      },
+      {
+        "hour_utc": "2026-02-22T08:00:00+00:00",
+        "count": 13
+      },
+      {
+        "hour_utc": "2026-02-22T09:00:00+00:00",
+        "count": 6
+      },
+      {
+        "hour_utc": "2026-02-22T10:00:00+00:00",
+        "count": 16
+      },
+      {
+        "hour_utc": "2026-02-22T11:00:00+00:00",
+        "count": 7
+      },
+      {
+        "hour_utc": "2026-02-22T12:00:00+00:00",
+        "count": 4
+      },
+      {
+        "hour_utc": "2026-02-22T13:00:00+00:00",
+        "count": 11
+      },
+      {
+        "hour_utc": "2026-02-22T14:00:00+00:00",
+        "count": 10
+      },
+      {
+        "hour_utc": "2026-02-22T15:00:00+00:00",
+        "count": 11
+      },
+      {
+        "hour_utc": "2026-02-22T16:00:00+00:00",
+        "count": 10
+      },
+      {
+        "hour_utc": "2026-02-22T17:00:00+00:00",
+        "count": 9
+      },
+      {
+        "hour_utc": "2026-02-22T18:00:00+00:00",
+        "count": 15
+      },
+      {
+        "hour_utc": "2026-02-22T19:00:00+00:00",
+        "count": 10
+      },
+      {
+        "hour_utc": "2026-02-22T20:00:00+00:00",
+        "count": 7
+      },
+      {
+        "hour_utc": "2026-02-22T21:00:00+00:00",
+        "count": 7
+      },
+      {
+        "hour_utc": "2026-02-22T22:00:00+00:00",
+        "count": 8
+      },
+      {
+        "hour_utc": "2026-02-22T23:00:00+00:00",
+        "count": 6
+      },
+      {
+        "hour_utc": "2026-02-23T00:00:00+00:00",
+        "count": 23
+      },
+      {
+        "hour_utc": "2026-02-23T01:00:00+00:00",
+        "count": 19
+      },
+      {
+        "hour_utc": "2026-02-23T02:00:00+00:00",
+        "count": 12
+      },
+      {
+        "hour_utc": "2026-02-23T03:00:00+00:00",
+        "count": 20
+      },
+      {
+        "hour_utc": "2026-02-23T04:00:00+00:00",
+        "count": 19
+      },
+      {
+        "hour_utc": "2026-02-23T05:00:00+00:00",
+        "count": 22
+      },
+      {
+        "hour_utc": "2026-02-23T06:00:00+00:00",
+        "count": 32
+      },
+      {
+        "hour_utc": "2026-02-23T07:00:00+00:00",
+        "count": 19
+      },
+      {
+        "hour_utc": "2026-02-23T08:00:00+00:00",
+        "count": 15
+      },
+      {
+        "hour_utc": "2026-02-23T09:00:00+00:00",
+        "count": 16
+      },
+      {
+        "hour_utc": "2026-02-23T10:00:00+00:00",
+        "count": 35
+      },
+      {
+        "hour_utc": "2026-02-23T11:00:00+00:00",
+        "count": 13
+      },
+      {
+        "hour_utc": "2026-02-23T12:00:00+00:00",
+        "count": 20
+      },
+      {
+        "hour_utc": "2026-02-23T13:00:00+00:00",
+        "count": 14
+      },
+      {
+        "hour_utc": "2026-02-23T14:00:00+00:00",
+        "count": 10
+      },
+      {
+        "hour_utc": "2026-02-23T15:00:00+00:00",
+        "count": 9
+      },
+      {
+        "hour_utc": "2026-02-23T16:00:00+00:00",
+        "count": 7
+      },
+      {
+        "hour_utc": "2026-02-23T17:00:00+00:00",
+        "count": 12
+      },
+      {
+        "hour_utc": "2026-02-23T18:00:00+00:00",
+        "count": 11
+      },
+      {
+        "hour_utc": "2026-02-23T19:00:00+00:00",
+        "count": 16
+      },
+      {
+        "hour_utc": "2026-02-23T20:00:00+00:00",
+        "count": 17
+      },
+      {
+        "hour_utc": "2026-02-23T21:00:00+00:00",
+        "count": 11
+      },
+      {
+        "hour_utc": "2026-02-23T22:00:00+00:00",
+        "count": 10
+      },
+      {
+        "hour_utc": "2026-02-23T23:00:00+00:00",
+        "count": 10
+      },
+      {
+        "hour_utc": "2026-02-24T00:00:00+00:00",
+        "count": 19
+      },
+      {
+        "hour_utc": "2026-02-24T01:00:00+00:00",
+        "count": 18
+      },
+      {
+        "hour_utc": "2026-02-24T02:00:00+00:00",
+        "count": 11
+      },
+      {
+        "hour_utc": "2026-02-24T03:00:00+00:00",
+        "count": 3
+      },
+      {
+        "hour_utc": "2026-02-24T04:00:00+00:00",
+        "count": 13
+      },
+      {
+        "hour_utc": "2026-02-24T05:00:00+00:00",
+        "count": 15
+      },
+      {
+        "hour_utc": "2026-02-24T06:00:00+00:00",
+        "count": 11
+      },
+      {
+        "hour_utc": "2026-02-24T07:00:00+00:00",
+        "count": 16
+      },
+      {
+        "hour_utc": "2026-02-24T08:00:00+00:00",
+        "count": 11
+      },
+      {
+        "hour_utc": "2026-02-24T09:00:00+00:00",
+        "count": 10
+      },
+      {
+        "hour_utc": "2026-02-24T10:00:00+00:00",
+        "count": 9
+      },
+      {
+        "hour_utc": "2026-02-24T11:00:00+00:00",
+        "count": 11
+      },
+      {
+        "hour_utc": "2026-02-24T12:00:00+00:00",
+        "count": 18
+      },
+      {
+        "hour_utc": "2026-02-24T13:00:00+00:00",
+        "count": 15
+      },
+      {
+        "hour_utc": "2026-02-24T14:00:00+00:00",
+        "count": 11
+      },
+      {
+        "hour_utc": "2026-02-24T15:00:00+00:00",
+        "count": 13
+      },
+      {
+        "hour_utc": "2026-02-24T16:00:00+00:00",
+        "count": 16
+      },
+      {
+        "hour_utc": "2026-02-24T17:00:00+00:00",
+        "count": 11
+      },
+      {
+        "hour_utc": "2026-02-24T18:00:00+00:00",
+        "count": 13
+      },
+      {
+        "hour_utc": "2026-02-24T19:00:00+00:00",
+        "count": 12
+      },
+      {
+        "hour_utc": "2026-02-24T20:00:00+00:00",
+        "count": 10
+      },
+      {
+        "hour_utc": "2026-02-24T21:00:00+00:00",
+        "count": 6
+      },
+      {
+        "hour_utc": "2026-02-24T22:00:00+00:00",
+        "count": 10
+      },
+      {
+        "hour_utc": "2026-02-24T23:00:00+00:00",
+        "count": 13
+      },
+      {
+        "hour_utc": "2026-02-25T00:00:00+00:00",
+        "count": 7
+      },
+      {
+        "hour_utc": "2026-02-25T01:00:00+00:00",
+        "count": 11
+      },
+      {
+        "hour_utc": "2026-02-25T02:00:00+00:00",
+        "count": 10
+      },
+      {
+        "hour_utc": "2026-02-25T03:00:00+00:00",
+        "count": 8
+      },
+      {
+        "hour_utc": "2026-02-25T04:00:00+00:00",
+        "count": 7
+      },
+      {
+        "hour_utc": "2026-02-25T05:00:00+00:00",
+        "count": 7
+      },
+      {
+        "hour_utc": "2026-02-25T06:00:00+00:00",
+        "count": 8
+      },
+      {
+        "hour_utc": "2026-02-25T07:00:00+00:00",
+        "count": 10
+      },
+      {
+        "hour_utc": "2026-02-25T08:00:00+00:00",
+        "count": 4
+      },
+      {
+        "hour_utc": "2026-02-25T09:00:00+00:00",
+        "count": 11
+      },
+      {
+        "hour_utc": "2026-02-25T10:00:00+00:00",
+        "count": 9
+      },
+      {
+        "hour_utc": "2026-02-25T11:00:00+00:00",
+        "count": 13
+      },
+      {
+        "hour_utc": "2026-02-25T12:00:00+00:00",
+        "count": 7
+      },
+      {
+        "hour_utc": "2026-02-25T13:00:00+00:00",
+        "count": 10
+      },
+      {
+        "hour_utc": "2026-02-25T14:00:00+00:00",
+        "count": 5
+      },
+      {
+        "hour_utc": "2026-02-25T15:00:00+00:00",
+        "count": 8
+      },
+      {
+        "hour_utc": "2026-02-25T16:00:00+00:00",
+        "count": 12
+      },
+      {
+        "hour_utc": "2026-02-25T17:00:00+00:00",
+        "count": 14
+      },
+      {
+        "hour_utc": "2026-02-25T18:00:00+00:00",
+        "count": 6
+      },
+      {
+        "hour_utc": "2026-02-25T19:00:00+00:00",
+        "count": 5
+      },
+      {
+        "hour_utc": "2026-02-25T20:00:00+00:00",
+        "count": 8
+      },
+      {
+        "hour_utc": "2026-02-25T21:00:00+00:00",
+        "count": 9
+      },
+      {
+        "hour_utc": "2026-02-25T22:00:00+00:00",
+        "count": 8
+      },
+      {
+        "hour_utc": "2026-02-25T23:00:00+00:00",
+        "count": 11
+      },
+      {
+        "hour_utc": "2026-02-26T00:00:00+00:00",
+        "count": 8
+      },
+      {
+        "hour_utc": "2026-02-26T01:00:00+00:00",
+        "count": 5
+      },
+      {
+        "hour_utc": "2026-02-26T02:00:00+00:00",
+        "count": 3
+      },
+      {
+        "hour_utc": "2026-02-26T03:00:00+00:00",
+        "count": 7
+      }
+    ],
+    "daily_counts": [
+      {
+        "day_utc": "2026-01-27T00:00:00+00:00",
+        "count": 331
+      },
+      {
+        "day_utc": "2026-01-28T00:00:00+00:00",
+        "count": 422
+      },
+      {
+        "day_utc": "2026-01-29T00:00:00+00:00",
+        "count": 313
+      },
+      {
+        "day_utc": "2026-01-30T00:00:00+00:00",
+        "count": 377
+      },
+      {
+        "day_utc": "2026-01-31T00:00:00+00:00",
+        "count": 269
+      },
+      {
+        "day_utc": "2026-02-01T00:00:00+00:00",
+        "count": 321
+      },
+      {
+        "day_utc": "2026-02-02T00:00:00+00:00",
+        "count": 400
+      },
+      {
+        "day_utc": "2026-02-03T00:00:00+00:00",
+        "count": 286
+      },
+      {
+        "day_utc": "2026-02-04T00:00:00+00:00",
+        "count": 310
+      },
+      {
+        "day_utc": "2026-02-05T00:00:00+00:00",
+        "count": 295
+      },
+      {
+        "day_utc": "2026-02-06T00:00:00+00:00",
+        "count": 349
+      },
+      {
+        "day_utc": "2026-02-07T00:00:00+00:00",
+        "count": 321
+      },
+      {
+        "day_utc": "2026-02-08T00:00:00+00:00",
+        "count": 385
+      },
+      {
+        "day_utc": "2026-02-09T00:00:00+00:00",
+        "count": 334
+      },
+      {
+        "day_utc": "2026-02-10T00:00:00+00:00",
+        "count": 340
+      },
+      {
+        "day_utc": "2026-02-11T00:00:00+00:00",
+        "count": 340
+      },
+      {
+        "day_utc": "2026-02-12T00:00:00+00:00",
+        "count": 400
+      },
+      {
+        "day_utc": "2026-02-13T00:00:00+00:00",
+        "count": 394
+      },
+      {
+        "day_utc": "2026-02-14T00:00:00+00:00",
+        "count": 284
+      },
+      {
+        "day_utc": "2026-02-15T00:00:00+00:00",
+        "count": 274
+      },
+      {
+        "day_utc": "2026-02-16T00:00:00+00:00",
+        "count": 301
+      },
+      {
+        "day_utc": "2026-02-17T00:00:00+00:00",
+        "count": 291
+      },
+      {
+        "day_utc": "2026-02-18T00:00:00+00:00",
+        "count": 273
+      },
+      {
+        "day_utc": "2026-02-19T00:00:00+00:00",
+        "count": 287
+      },
+      {
+        "day_utc": "2026-02-20T00:00:00+00:00",
+        "count": 243
+      },
+      {
+        "day_utc": "2026-02-21T00:00:00+00:00",
+        "count": 330
+      },
+      {
+        "day_utc": "2026-02-22T00:00:00+00:00",
+        "count": 240
+      },
+      {
+        "day_utc": "2026-02-23T00:00:00+00:00",
+        "count": 392
+      },
+      {
+        "day_utc": "2026-02-24T00:00:00+00:00",
+        "count": 295
+      },
+      {
+        "day_utc": "2026-02-25T00:00:00+00:00",
+        "count": 208
+      },
+      {
+        "day_utc": "2026-02-26T00:00:00+00:00",
+        "count": 23
+      }
+    ]
+  }
+}

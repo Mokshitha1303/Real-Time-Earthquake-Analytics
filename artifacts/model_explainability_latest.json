@@ -1,0 +1,182 @@
+{
+  "generated_at_utc": "2026-02-26T04:06:05.943687+00:00",
+  "top_anomalies": [
+    {
+      "region_hint": "Hawaii",
+      "hour_utc": "2026-02-26T03:00:00+00:00",
+      "observed_count": 3,
+      "expected_count": 0.3629345239881544,
+      "z_score": 2.2588293223084075,
+      "region_z_threshold": 1.0,
+      "region_min_anomaly_count": 3,
+      "is_anomalous": true,
+      "explanation": {
+        "top_expected_components": [
+          {
+            "component": "recent_mean_6",
+            "weight": 0.2938388519,
+            "raw_value": 0.6666666666666666,
+            "contribution": 0.19589256793333332
+          },
+          {
+            "component": "recent_mean_24",
+            "weight": 0.1642107105,
+            "raw_value": 0.5,
+            "contribution": 0.08210535525
+          },
+          {
+            "component": "ewma_24",
+            "weight": 0.0669754899,
+            "raw_value": 0.5294989973291439,
+            "contribution": 0.0354634547476782
+          }
+        ],
+        "reason_flags": [
+          "z_score_above_region_threshold",
+          "count_above_region_min",
+          "flagged_anomalous"
+        ]
+      }
+    }
+  ],
+  "top_z_regions": [
+    {
+      "region_hint": "Hawaii",
+      "hour_utc": "2026-02-26T03:00:00+00:00",
+      "observed_count": 3,
+      "expected_count": 0.3629345239881544,
+      "z_score": 2.2588293223084075,
+      "region_z_threshold": 1.0,
+      "region_min_anomaly_count": 3,
+      "is_anomalous": true,
+      "explanation": {
+        "top_expected_components": [
+          {
+            "component": "recent_mean_6",
+            "weight": 0.2938388519,
+            "raw_value": 0.6666666666666666,
+            "contribution": 0.19589256793333332
+          },
+          {
+            "component": "recent_mean_24",
+            "weight": 0.1642107105,
+            "raw_value": 0.5,
+            "contribution": 0.08210535525
+          },
+          {
+            "component": "ewma_24",
+            "weight": 0.0669754899,
+            "raw_value": 0.5294989973291439,
+            "contribution": 0.0354634547476782
+          }
+        ],
+        "reason_flags": [
+          "z_score_above_region_threshold",
+          "count_above_region_min",
+          "flagged_anomalous"
+        ]
+      }
+    },
+    {
+      "region_hint": "New Mexico",
+      "hour_utc": "2026-02-26T03:00:00+00:00",
+      "observed_count": 1,
+      "expected_count": 0.0996662113292418,
+      "z_score": 0.8585648584978519,
+      "region_z_threshold": 1.0,
+      "region_min_anomaly_count": 3,
+      "is_anomalous": false,
+      "explanation": {
+        "top_expected_components": [
+          {
+            "component": "recent_mean_6",
+            "weight": 0.2938388519,
+            "raw_value": 0.16666666666666666,
+            "contribution": 0.04897314198333333
+          },
+          {
+            "component": "recent_mean_24",
+            "weight": 0.1642107105,
+            "raw_value": 0.125,
+            "contribution": 0.0205263388125
+          },
+          {
+            "component": "seasonal_mean",
+            "weight": 0.0991426172,
+            "raw_value": 0.14285714285714285,
+            "contribution": 0.014163231028571428
+          }
+        ],
+        "reason_flags": []
+      }
+    },
+    {
+      "region_hint": "Alaska",
+      "hour_utc": "2026-02-26T03:00:00+00:00",
+      "observed_count": 1,
+      "expected_count": 1.7188795387853646,
+      "z_score": -0.3199818454115233,
+      "region_z_threshold": 1.4,
+      "region_min_anomaly_count": 1,
+      "is_anomalous": false,
+      "explanation": {
+        "top_expected_components": [
+          {
+            "component": "seasonal_median",
+            "weight": 0.3441123045,
+            "raw_value": 2.0,
+            "contribution": 0.688224609
+          },
+          {
+            "component": "seasonal_mean",
+            "weight": 0.0991426172,
+            "raw_value": 3.142857142857143,
+            "contribution": 0.31159108262857144
+          },
+          {
+            "component": "recent_mean_24",
+            "weight": 0.1642107105,
+            "raw_value": 1.5416666666666667,
+            "contribution": 0.2531581786875
+          }
+        ],
+        "reason_flags": [
+          "count_above_region_min"
+        ]
+      }
+    },
+    {
+      "region_hint": "CA",
+      "hour_utc": "2026-02-26T03:00:00+00:00",
+      "observed_count": 2,
+      "expected_count": 2.799837030304401,
+      "z_score": -0.39410779192145406,
+      "region_z_threshold": 1.8,
+      "region_min_anomaly_count": 3,
+      "is_anomalous": false,
+      "explanation": {
+        "top_expected_components": [
+          {
+            "component": "recent_mean_6",
+            "weight": 0.2938388519,
+            "raw_value": 3.5,
+            "contribution": 1.02843598165
+          },
+          {
+            "component": "seasonal_median",
+            "weight": 0.3441123045,
+            "raw_value": 2.0,
+            "contribution": 0.688224609
+          },
+          {
+            "component": "recent_mean_24",
+            "weight": 0.1642107105,
+            "raw_value": 2.9583333333333335,
+            "contribution": 0.48579001856250004
+          }
+        ],
+        "reason_flags": []
+      }
+    }
+  ]
+}
